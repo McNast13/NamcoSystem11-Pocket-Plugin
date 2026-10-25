@@ -81,3 +81,7 @@ This plugin was written with Claude (Anthropic's AI model) through Claude Code, 
 the design of the [PlayStation game files plugin](https://github.com/GuardianSoul/openfpga-PlayStation-plugin) (whose
 `host/run_plugin.py` this one's is adapted from). Its output is checked file for file against the core's
 `make_games.py`.
+
+## License
+
+GPL-3.0-only (see [LICENSE](LICENSE)).
