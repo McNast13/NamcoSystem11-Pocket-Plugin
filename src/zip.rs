@@ -1,9 +1,11 @@
 //! Just enough of the zip format for MAME romsets: the central directory (names and CRCs, read without unpacking
-//! anything) and stored or deflated members, CRC-checked on reading as Python's zipfile does.
+//! anything) and stored or deflated members, CRC-checked on reading as Python's zipfile does. A zip can be a file
+//! on the card or held in memory (a zip found inside another zip).
 
 use std::fs::File;
 use std::io::{Read, Seek, SeekFrom};
-use std::path::{Path, PathBuf};
+use std::path::PathBuf;
+use std::rc::Rc;
 
 pub struct Entry {
     pub name: String,
@@ -15,29 +17,57 @@ pub struct Entry {
     local: u64,
 }
 
+enum Source {
+    File(PathBuf),
+    Memory(Rc<Vec<u8>>),
+}
+
 pub struct Zip {
-    path: PathBuf,
+    /// How the zip is shown to the user: its path below the folder, and "outer.zip > inner.zip" for a nested one.
+    pub label: String,
+    source: Source,
     pub entries: Vec<Entry>,
 }
 
 fn u16_at(b: &[u8], at: usize) -> u16 { u16::from_le_bytes([b[at], b[at + 1]]) }
 fn u32_at(b: &[u8], at: usize) -> u32 { u32::from_le_bytes([b[at], b[at + 1], b[at + 2], b[at + 3]]) }
 
-fn read_at(file: &mut File, at: u64, len: usize) -> std::io::Result<Vec<u8>> {
-    let mut buf = vec![0; len];
-    file.seek(SeekFrom::Start(at))?;
-    file.read_exact(&mut buf)?;
-    Ok(buf)
+impl Source {
+    fn len(&self) -> std::io::Result<u64> {
+        match self {
+            Source::File(p) => Ok(std::fs::metadata(p)?.len()),
+            Source::Memory(b) => Ok(b.len() as u64),
+        }
+    }
+
+    fn read_at(&self, at: u64, len: usize) -> std::io::Result<Vec<u8>> {
+        match self {
+            Source::File(p) => {
+                let mut file = File::open(p)?;
+                let mut buf = vec![0; len];
+                file.seek(SeekFrom::Start(at))?;
+                file.read_exact(&mut buf)?;
+                Ok(buf)
+            }
+            Source::Memory(b) => b
+                .get(at as usize..at as usize + len)
+                .map(|s| s.to_vec())
+                .ok_or_else(|| std::io::Error::from(std::io::ErrorKind::UnexpectedEof)),
+        }
+    }
 }
 
 impl Zip {
-    pub fn open(path: &Path) -> Result<Zip, String> {
-        let bad = |why: &str| format!("{}: {why}", path.file_name().unwrap_or_default().to_string_lossy());
-        let mut file = File::open(path).map_err(|e| bad(&e.to_string()))?;
-        let len = file.metadata().map_err(|e| bad(&e.to_string()))?.len();
+    pub fn open(path: PathBuf, label: String) -> Result<Zip, String> { Zip::load(Source::File(path), label) }
+
+    pub fn from_bytes(data: Vec<u8>, label: String) -> Result<Zip, String> { Zip::load(Source::Memory(Rc::new(data)), label) }
+
+    fn load(source: Source, label: String) -> Result<Zip, String> {
+        let bad = |why: &str| format!("{label}: {why}");
+        let len = source.len().map_err(|e| bad(&e.to_string()))?;
         // The end-of-central-directory record is the last 22 bytes, before a comment of up to 64 KB.
         let tail_len = len.min(22 + 0xFFFF) as usize;
-        let tail = read_at(&mut file, len - tail_len as u64, tail_len).map_err(|e| bad(&e.to_string()))?;
+        let tail = source.read_at(len - tail_len as u64, tail_len).map_err(|e| bad(&e.to_string()))?;
         let eocd = (0..tail_len.saturating_sub(21)).rev().find(|&i| u32_at(&tail, i) == 0x0605_4b50)
             .ok_or_else(|| bad("not a zip file"))?;
         let count = u16_at(&tail, eocd + 10) as usize;
@@ -46,7 +76,7 @@ impl Zip {
         if count == 0xFFFF || cd_size == 0xFFFF_FFFF || cd_offset == 0xFFFF_FFFF {
             return Err(bad("zip64 archives are not supported (re-zip it as a normal zip)"));
         }
-        let cd = read_at(&mut file, cd_offset as u64, cd_size as usize).map_err(|_| bad("damaged zip (central directory)"))?;
+        let cd = source.read_at(cd_offset as u64, cd_size as usize).map_err(|_| bad("damaged zip (central directory)"))?;
         let mut entries = Vec::with_capacity(count);
         let mut at = 0;
         for _ in 0..count {
@@ -67,27 +97,20 @@ impl Zip {
             });
             at += 46 + name_len + extra_len + comment_len;
         }
-        Ok(Zip { path: path.to_path_buf(), entries })
+        Ok(Zip { label, source, entries })
     }
 
-    pub fn find(&self, name: &str) -> Option<&Entry> { self.entries.iter().find(|e| e.name == name) }
-
-    /// The first member with this CRC (as rom_packer.py looks through infolist()).
-    pub fn find_crc(&self, crc: u32) -> Option<&Entry> { self.entries.iter().find(|e| e.crc == crc) }
-
     pub fn read(&self, entry: &Entry) -> Result<Vec<u8>, String> {
-        let zip = self.path.file_name().unwrap_or_default().to_string_lossy();
-        let bad = |why: &str| format!("{zip}/{}: {why}", entry.name);
+        let bad = |why: &str| format!("{} > {}: {why}", self.label, entry.name);
         if entry.flags & 1 != 0 {
             return Err(bad("encrypted"));
         }
-        let mut file = File::open(&self.path).map_err(|e| bad(&e.to_string()))?;
-        let local = read_at(&mut file, entry.local, 30).map_err(|_| bad("damaged zip"))?;
+        let local = self.source.read_at(entry.local, 30).map_err(|_| bad("damaged zip"))?;
         if u32_at(&local, 0) != 0x0403_4b50 {
             return Err(bad("damaged zip"));
         }
         let start = entry.local + 30 + u16_at(&local, 26) as u64 + u16_at(&local, 28) as u64;
-        let raw = read_at(&mut file, start, entry.compressed as usize).map_err(|_| bad("damaged zip (truncated)"))?;
+        let raw = self.source.read_at(start, entry.compressed as usize).map_err(|_| bad("damaged zip (truncated)"))?;
         let data = match entry.method {
             0 => raw,
             8 => miniz_oxide::inflate::decompress_to_vec_with_limit(&raw, entry.size as usize)

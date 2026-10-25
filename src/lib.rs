@@ -48,6 +48,8 @@ fn println(msg: &str) { print(&format!("{msg}\n")); }
 
 fn common(t: &Table) -> PathBuf { Path::new(CARD).join("Assets").join(&t.platform).join("common") }
 
+fn count(n: usize) -> String { if n == 1 { "1 game".into() } else { format!("{n} games") } }
+
 fn label(s: &Set) -> String { format!("{} [{}]", s.title, s.set) }
 
 /// The sets that can be installed from the zips on the card, after listing what was found.
@@ -61,50 +63,36 @@ fn scan(t: &Table, report: bool) -> Option<Vec<usize>> {
     let shown = format!("Assets/{}/common", t.platform);
     remove_leftovers(t);
     let mut zips = ZipSet::new(&dir);
-    let names = zips.names(&dir);
-    if names.is_empty() {
+    if zips.files() == 0 {
         println(&format!("No zips in {shown} or its subfolders."));
         println(&format!(
             "Copy your own MAME romsets (current MAME, e.g. tekken.zip) and namcoc76.zip into {shown} (a folder of them is fine) and run this again."
         ));
         return None;
     }
-    let known = |n: &String| {
-        let file = Path::new(n).file_name().unwrap_or_default().to_string_lossy();
-        t.sets.iter().any(|s| s.all_zips().any(|z| z.eq_ignore_ascii_case(&file)))
-    };
-    let (used, unused): (Vec<&String>, Vec<&String>) = names.iter().partition(|n| known(n));
-    say(&format!("Found {} zip(s) in {shown}{}.", names.len(), if used.is_empty() { String::new() } else {
-        format!("; for this core: {}", used.iter().map(|s| s.as_str()).collect::<Vec<_>>().join(", "))
-    }));
-    if !unused.is_empty() {
-        let first: Vec<&str> = unused.iter().take(8).map(|s| s.as_str()).collect();
-        let more = if unused.len() > first.len() { format!(" and {} more", unused.len() - first.len()) } else { String::new() };
-        say(&format!("Not romsets for games in the core's list (ignored): {}{more}", first.join(", ")));
-    }
-    for (kept, ignored) in zips.duplicates.iter().filter(|(k, _)| known(&k.display().to_string())) {
-        let rel = |p: &PathBuf| p.strip_prefix(&dir).unwrap_or(p).display().to_string();
-        say(&format!("{} is in more than one folder: using {}, ignoring {}", ignored.file_name().unwrap_or_default().to_string_lossy(), rel(kept), rel(ignored)));
-    }
-    for z in t.sets[0].bios_zips() {
-        if !zips.has(z) {
-            say(&format!("{z} (the C76 sound CPU BIOS that every game needs) is not there: copy it in with the games."));
+    let has_bios = zips.has_bios(&t.sets[0]);
+    let (mut ready, mut problems) = (vec![], vec![]);
+    for (i, s) in t.sets.iter().enumerate() {
+        match zips.check(s) {
+            None => {}
+            Some(Ok(())) => ready.push(i),
+            Some(Err(e)) => problems.push(format!("  {}: {e}", label(s))),
         }
     }
 
-    let (mut ready, mut problems) = (vec![], vec![]);
-    for (i, s) in t.sets.iter().enumerate() {
-        if !s.game_zips().iter().any(|z| zips.has(z)) {
-            continue;
-        }
-        match zips.check(s) {
-            Ok(()) => ready.push(i),
-            Err(e) => problems.push(format!("  {}: {e}", label(s))),
-        }
-        zips.close();
+    let (used, unused) = zips.used_and_unused();
+    say(&format!("Found {} zip(s) in {shown}{}.", zips.files(), if used.is_empty() { String::new() } else {
+        format!("; with files for this core: {}", used.join(", "))
+    }));
+    if !unused.is_empty() {
+        let more = if unused.len() > 8 { format!(" and {} more", unused.len() - 8) } else { String::new() };
+        say(&format!("No files for any game in the core's list (ignored): {}{more}", unused[..unused.len().min(8)].join(", ")));
+    }
+    for e in &zips.unreadable {
+        say(&format!("Couldn't read {e}"));
     }
     if !ready.is_empty() {
-        say(&format!("Ready to install ({}):", ready.len()));
+        say(&format!("Ready to install{} ({}):", if has_bios { "" } else { " once the BIOS is there" }, ready.len()));
         for &i in &ready {
             let s = &t.sets[i];
             say(&format!("  {}{}", label(s), if s.alt { " (alternative version)" } else { "" }));
@@ -116,6 +104,14 @@ fn scan(t: &Table, report: bool) -> Option<Vec<usize>> {
             say(p);
         }
     }
+    if !has_bios {
+        println(&format!(
+            "The C76 sound CPU BIOS that every game needs ({} in {}) isn't in any zip here: copy that zip in with the games.",
+            t.bios.filename,
+            t.sets[0].bios_zips().join(" or ")
+        ));
+        return None;
+    }
     if ready.is_empty() {
         println("Nothing to install.");
         return None;
@@ -126,9 +122,9 @@ fn scan(t: &Table, report: bool) -> Option<Vec<usize>> {
 fn menu(t: &Table) -> PluginMessage {
     let Some(ready) = scan(t, true) else { return PluginMessage::Exit };
     let main = ready.iter().filter(|&&i| !t.sets[i].alt).count();
-    let mut choices = vec![format!("{INSTALL_ALL} ({} games)", ready.len())];
+    let mut choices = vec![format!("{INSTALL_ALL} ({})", count(ready.len()))];
     if main > 0 && main < ready.len() {
-        choices.push(format!("{INSTALL_MAIN} ({main} games)"));
+        choices.push(format!("{INSTALL_MAIN} ({})", count(main)));
     }
     choices.push(EXIT.into());
     PluginMessage::Choice { name: "install".into(), query: "Install these games on the SD card?".into(), choices }
@@ -232,7 +228,6 @@ fn run(t: &Table, main_only: bool) -> PluginMessage {
             Some(c) if *c != bios => Err("its C76 BIOS differs from the other games'".to_string()),
             _ => Ok(bios),
         });
-        zips.close();
         match result {
             Ok(bios) => {
                 println("done");

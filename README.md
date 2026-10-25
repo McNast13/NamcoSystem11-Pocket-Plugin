@@ -11,19 +11,23 @@ No ROMs are included or downloaded: it only uses the zips you put on the SD card
 1. Install the Namco System 11 core.
 2. Copy your **current MAME** romset zips (for example `tekken.zip`, `souledge.zip`) and `namcoc76.zip` (the C76 sound
    CPU BIOS every game needs) into `Assets/namco_system11/common/` on the SD card. A folder of zips works too: the
-   plugin looks in subfolders (up to four levels down) and ignores zips that aren't for this core.
+   plugin looks in subfolders (up to four levels down).
 3. In Pocket Sync or pupdate, add a plugin from this repository's link, put the SD card in and open
    *Namco System 11 games*.
 
-The plugin lists the zips it found and, for every game in the core's list (35 sets, main versions and alternatives),
-whether it can be installed:
+The plugin finds each game's files by their content, so the zips' names don't matter: renamed zips
+(`tekken2 (1).zip`), zips from older MAME versions (where a clone's files were in another set's zip, or had other
+names), merged sets, and zips inside zips (a download that holds `tekken2.zip` and `namcoc76.zip`) all work. It looks
+in the zip named after the set first, as `make_games.py` does, then for a file with the right CRC in every other zip.
 
-- **Ready**: every file the game needs is in its zip (or its parent's, for a clone, as in MAME) with the right CRC.
-  A file with the right CRC is accepted whatever it is named, so merged sets work.
-- **Can't be installed**: which files are missing and which zips it looked in, or which file has the wrong CRC
-  (usually a romset from an older MAME version).
-- Zips that aren't a romset for any game in the list are ignored. If the same zip is in two folders, it says which
-  one it uses.
+It then lists, for every game in the core's list (35 sets, main versions and alternatives) that any of the zips has
+files for, whether it can be installed:
+
+- **Ready**: every file the game needs was found with the right CRC.
+- **Can't be installed**: which files are missing, or which file has the wrong CRC (usually a romset from another
+  MAME version).
+- Zips with no files for any game in the list are named and ignored, and `namcoc76.zip` is reported once if no zip
+  has the C76 BIOS.
 
 Choose *Install all* (or *Install the main versions only*) and it writes, for each game,
 `Assets/namco_system11/common/<set>/rom_<n>.bin` and the game's entry in the core's list with each file's MD5, plus
@@ -43,8 +47,8 @@ never leaves a half-written file under its real name; the next run removes any `
   ```
 - `src/pack.rs` is a port of the core's `tools/rom_packer.py` (the MiSTer MRA loader's interleaving), and `src/lib.rs`
   of `make_games.py`'s install step (data slots, the 16 MB bank split into `rom_3b.bin`, config padding, instance files).
-- `src/zip.rs` reads zips (stored or deflated). Checking a set only reads the zips' directories; files are unpacked, and
-  their CRCs checked again, when a game is installed.
+- `src/zip.rs` reads zips (stored or deflated), and zips inside zips (held in memory). Checking a set only reads the
+  zips' directories; files are unpacked, and their CRCs checked again, when a game is installed.
 
 ## Build
 
@@ -62,8 +66,9 @@ cargo test --lib --target "$(rustc -vV | sed -n 's/host: //p')"
 python3 host/run_plugin.py target/wasm32-wasip1/release/plugin.wasm /path/to/sd-card --answer "Install all"
 ```
 
-`tests/compare_with_make_games.py` installs the same zips with `make_games.py` and with the plugin on two fresh cards and
-checks every file is identical:
+`tests/compare_with_make_games.py` installs the same zips with `make_games.py` and with the plugin, and checks every
+file is identical. The plugin runs twice: on the zips as they are, and on the zips renamed and packed into one zip of
+zips in a subfolder.
 
 ```
 python3 tests/compare_with_make_games.py /path/to/NamcoSystem11-Pocket /path/to/roms

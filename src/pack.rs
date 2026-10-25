@@ -1,9 +1,9 @@
 //! The game list (src/games.json, made from the core's MRAs by scripts/gen_games.py) and the port of the core's
 //! tools/rom_packer.py that turns a set's MAME zips into its ROM images.
 
-use crate::zip::{Entry, Zip};
+use crate::zip::Zip;
 use serde::Deserialize;
-use std::collections::{BTreeMap, HashMap};
+use std::collections::{BTreeMap, BTreeSet, HashMap};
 use std::path::{Path, PathBuf};
 
 #[derive(Deserialize)]
@@ -58,160 +58,191 @@ pub const BIOS_INDEX: u32 = 8;
 pub fn table() -> Table { serde_json::from_str(include_str!("games.json")).expect("games.json") }
 
 impl Set {
-    /// The zips this set reads its own files from (its zip and its parent's), not the shared BIOS zip.
-    pub fn game_zips(&self) -> Vec<&str> {
-        let mut out: Vec<&str> = vec![];
-        for rom in self.roms.iter().filter(|r| r.index != BIOS_INDEX) {
-            for z in rom.parts.iter().flat_map(|p| p.zips.iter()) {
-                if !out.contains(&z.as_str()) {
-                    out.push(z);
-                }
-            }
-        }
-        out
-    }
-
     /// The zips the shared C76 BIOS comes from.
     pub fn bios_zips(&self) -> Vec<&str> {
         self.roms.iter().filter(|r| r.index == BIOS_INDEX).flat_map(|r| r.parts.iter()).flat_map(|p| p.zips.iter())
             .map(|z| z.as_str()).collect()
     }
 
-    pub fn all_zips(&self) -> impl Iterator<Item = &str> {
-        self.roms.iter().flat_map(|r| r.parts.iter()).flat_map(|p| p.zips.iter()).map(|z| z.as_str())
+    /// The named files of the game itself (not the shared BIOS).
+    fn game_parts(&self) -> impl Iterator<Item = &Part> {
+        self.roms.iter().filter(|r| r.index != BIOS_INDEX).flat_map(|r| r.parts.iter()).filter(|p| p.name.is_some())
+    }
+
+    fn bios_parts(&self) -> impl Iterator<Item = &Part> {
+        self.roms.iter().filter(|r| r.index == BIOS_INDEX).flat_map(|r| r.parts.iter()).filter(|p| p.name.is_some())
     }
 }
 
-/// The zips in one folder (the SD card's Assets/<platform>/common) and its subfolders, opened as they are needed.
-/// Names are matched ignoring case, as the Pocket's FAT/exFAT card does.
+/// Every zip in one folder (the SD card's Assets/<platform>/common) and its subfolders, and every zip inside those
+/// zips. A set's files are looked for in the zips it names first, as make_games.py does, and then by CRC in all the
+/// others, so renamed zips, zips from older MAME versions (where a clone's files were in another set's zip) and
+/// zips of zips all work.
 pub struct ZipSet {
-    files: HashMap<String, PathBuf>,
-    open: HashMap<String, Result<Zip, String>>,
-    /// Zips found again in another folder: (the one used, the one ignored).
-    pub duplicates: Vec<(PathBuf, PathBuf)>,
+    zips: Vec<Zip>,
+    /// The zip each nested zip was found in.
+    parent: Vec<Option<usize>>,
+    /// Lowercase file name -> zip, the first found (zips on the card before zips inside zips).
+    by_name: HashMap<String, usize>,
+    /// Zips that can't be read, with why.
+    pub unreadable: Vec<String>,
+    /// The zips a file has been found in.
+    used: BTreeSet<usize>,
 }
 
 /// How deep below the folder to look, so a user can copy in a folder of zips (or a folder of folders).
 const MAX_DEPTH: usize = 4;
 
-/// A folder's own zips, then its subfolders' in name order; when a zip is in two folders, the first one found is used.
-fn walk(dir: &Path, depth: usize, files: &mut HashMap<String, PathBuf>, duplicates: &mut Vec<(PathBuf, PathBuf)>) {
+/// A folder's own zips, then its subfolders' in name order.
+fn walk(dir: &Path, depth: usize, files: &mut Vec<PathBuf>) {
     let Ok(list) = std::fs::read_dir(dir) else { return };
     let mut list: Vec<_> = list.flatten().filter(|f| !f.file_name().to_string_lossy().starts_with('.')).collect();
     list.sort_by_key(|f| f.file_name());
     let mut subdirs = vec![];
     for f in list {
-        let (name, path) = (f.file_name().to_string_lossy().to_lowercase(), f.path());
+        let path = f.path();
         if path.is_dir() {
             subdirs.push(path);
-        } else if name.ends_with(".zip") {
-            match files.get(&name) {
-                Some(used) => duplicates.push((used.clone(), path)),
-                None => {
-                    files.insert(name, path);
-                }
-            }
+        } else if f.file_name().to_string_lossy().to_lowercase().ends_with(".zip") {
+            files.push(path);
         }
     }
     if depth < MAX_DEPTH {
         for d in subdirs {
-            walk(&d, depth + 1, files, duplicates);
+            walk(&d, depth + 1, files);
         }
     }
 }
 
-enum Found<'a> {
-    Entry(&'a Zip, &'a Entry),
-    Missing(String),
-    Bad(String),
-}
+fn lower_file_name(name: &str) -> String { name.rsplit('/').next().unwrap_or(name).to_lowercase() }
 
 impl ZipSet {
     pub fn new(dir: &Path) -> ZipSet {
-        let (mut files, mut duplicates) = (HashMap::new(), vec![]);
-        walk(dir, 0, &mut files, &mut duplicates);
-        ZipSet { files, open: HashMap::new(), duplicates }
-    }
-
-    /// The zip files found, by their paths below the folder.
-    pub fn names(&self, dir: &Path) -> Vec<String> {
-        let mut v: Vec<String> =
-            self.files.values().map(|p| p.strip_prefix(dir).unwrap_or(p).display().to_string()).collect();
-        v.sort();
-        v
-    }
-
-    pub fn has(&self, zip: &str) -> bool { self.files.contains_key(&zip.to_lowercase()) }
-
-    /// Forget the opened zips (their directories), so packing one set at a time doesn't keep every zip's list.
-    pub fn close(&mut self) { self.open.clear(); }
-
-    fn zip(&mut self, name: &str) -> Option<&Result<Zip, String>> {
-        let key = name.to_lowercase();
-        let path = self.files.get(&key)?.clone();
-        Some(self.open.entry(key).or_insert_with(|| Zip::open(&path)))
-    }
-
-    /// Where a part is, looked up as rom_packer.ZipSet.read() does: each zip in turn; a member with the part's name
-    /// must have its CRC; otherwise any member with the part's CRC will do (merged sets, renamed files).
-    fn find(&mut self, part: &Part) -> Found<'_> {
-        let name = part.name.as_deref().unwrap_or_default();
-        for z in &part.zips {
-            self.zip(z);
-        }
-        let mut last = None;
-        for z in &part.zips {
-            let Some(zip) = self.open.get(&z.to_lowercase()) else {
-                last.get_or_insert_with(|| format!("{z} is not on the SD card"));
-                continue;
-            };
-            let zip = match zip {
-                Ok(zip) => zip,
-                Err(e) => return Found::Bad(e.clone()),
-            };
-            if let Some(e) = zip.find(name) {
-                return match part.crc {
-                    Some(crc) if e.crc != crc => Found::Bad(format!(
-                        "{z}: {name} has CRC {:08x}, the core needs {crc:08x} (a romset from another MAME version?)",
-                        e.crc
-                    )),
-                    _ => Found::Entry(zip, e),
-                };
-            }
-            if let Some(e) = part.crc.and_then(|crc| zip.find_crc(crc)) {
-                return Found::Entry(zip, e);
-            }
-            last = Some(format!("{name} is not in {z}"));
-        }
-        Found::Missing(last.unwrap_or_else(|| format!("{name}: no zip given")))
-    }
-
-    /// Whether every file a set needs is in the zips, with the right CRC (from the zips' directories, nothing unpacked).
-    pub fn check(&mut self, set: &Set) -> Result<(), String> {
-        let (mut missing, mut zips_looked) = (vec![], vec![]);
-        for part in set.roms.iter().flat_map(|r| r.parts.iter()).filter(|p| p.name.is_some()) {
-            match self.find(part) {
-                Found::Entry(..) => {}
-                Found::Bad(e) => return Err(e),
-                Found::Missing(_) => {
-                    missing.push(part.name.clone().unwrap_or_default());
-                    for z in &part.zips {
-                        if !zips_looked.contains(z) {
-                            zips_looked.push(z.clone());
+        let mut files = vec![];
+        walk(dir, 0, &mut files);
+        let mut set =
+            ZipSet { zips: vec![], parent: vec![], by_name: HashMap::new(), unreadable: vec![], used: BTreeSet::new() };
+        let mut nested = vec![];
+        for path in files {
+            let label = path.strip_prefix(dir).unwrap_or(&path).display().to_string();
+            match Zip::open(path.clone(), label) {
+                Ok(zip) => {
+                    let i = set.zips.len();
+                    for e in zip.entries.iter().filter(|e| e.name.to_lowercase().ends_with(".zip")) {
+                        let label = format!("{} > {}", zip.label, e.name);
+                        match zip.read(e).and_then(|bytes| Zip::from_bytes(bytes, label)) {
+                            Ok(inner) => nested.push((i, lower_file_name(&e.name), inner)),
+                            Err(err) => set.unreadable.push(err),
                         }
                     }
+                    let name = path.file_name().unwrap_or_default().to_string_lossy().to_lowercase();
+                    set.by_name.entry(name).or_insert(i);
+                    set.zips.push(zip);
+                    set.parent.push(None);
                 }
+                Err(err) => set.unreadable.push(err),
             }
         }
-        if missing.is_empty() {
-            return Ok(());
+        for (parent, name, zip) in nested {
+            set.by_name.entry(name).or_insert(set.zips.len());
+            set.zips.push(zip);
+            set.parent.push(Some(parent));
         }
-        let shown = if missing.len() > 3 { format!("{}, ...", missing[..3].join(", ")) } else { missing.join(", ") };
-        let looked: Vec<String> = zips_looked
-            .iter()
-            .map(|z| if self.has(z) { z.clone() } else { format!("{z} (not on the card)") })
-            .collect();
-        Err(format!("{} file(s) missing: {shown}; looked in {}", missing.len(), looked.join(", ")))
+        set
+    }
+
+    /// The zips on the card (not counting zips inside them).
+    pub fn files(&self) -> usize { self.parent.iter().filter(|p| p.is_none()).count() }
+
+    /// The zips on the card that some file was found in (in them, or in a zip inside them), and the others.
+    pub fn used_and_unused(&self) -> (Vec<String>, Vec<String>) {
+        let (mut used, mut unused) = (vec![], vec![]);
+        for (i, zip) in self.zips.iter().enumerate().filter(|(i, _)| self.parent[*i].is_none()) {
+            let hit = self.used.iter().any(|&u| u == i || self.parent[u] == Some(i));
+            if hit { used.push(zip.label.clone()) } else { unused.push(zip.label.clone()) }
+        }
+        (used, unused)
+    }
+
+    fn hit(&mut self, zip: usize, entry: Option<usize>) -> Option<(usize, usize)> {
+        let entry = entry?;
+        self.used.insert(zip);
+        Some((zip, entry))
+    }
+
+    /// Where a part is: (zip, member). First in the zips the MRA names, as rom_packer.ZipSet.read() does (a member
+    /// with the part's name must have its CRC; otherwise any member with the part's CRC will do); then in every
+    /// other zip, by CRC (or by name, for a part the MRA gives no CRC for).
+    fn find(&mut self, part: &Part) -> Result<(usize, usize), String> {
+        let name = part.name.as_deref().unwrap_or_default();
+        let mut wrong_crc = None;
+        for z in &part.zips {
+            let Some(&i) = self.by_name.get(&z.to_lowercase()) else { continue };
+            let zip = &self.zips[i];
+            let named = zip.entries.iter().position(|e| e.name == name);
+            match (named, part.crc) {
+                (Some(e), Some(crc)) if zip.entries[e].crc != crc => {
+                    wrong_crc.get_or_insert(format!(
+                        "{}: {name} has CRC {:08x}, the core needs {crc:08x} (a romset from another MAME version?)",
+                        zip.label, zip.entries[e].crc
+                    ));
+                }
+                (Some(e), _) => {
+                    self.used.insert(i);
+                    return Ok((i, e));
+                }
+                (None, Some(crc)) => {
+                    if let Some(found) = self.hit(i, zip.entries.iter().position(|e| e.crc == crc)) {
+                        return Ok(found);
+                    }
+                }
+                (None, None) => {}
+            }
+        }
+        for i in 0..self.zips.len() {
+            let zip = &self.zips[i];
+            let e = match part.crc {
+                Some(crc) => zip.entries.iter().position(|e| e.crc == crc),
+                None => zip.entries.iter().position(|e| lower_file_name(&e.name) == name.to_lowercase()),
+            };
+            if let Some(found) = self.hit(i, e) {
+                return Ok(found);
+            }
+        }
+        Err(wrong_crc.unwrap_or_default())
+    }
+
+    /// Which of these parts can't be found: (name, why) for each, from the zips' directories (nothing is unpacked).
+    fn missing<'a>(&mut self, parts: impl Iterator<Item = &'a Part>) -> (usize, Vec<(String, String)>) {
+        let (mut found, mut missing) = (0, vec![]);
+        for part in parts {
+            match self.find(part) {
+                Ok(_) => found += 1,
+                Err(why) => missing.push((part.name.clone().unwrap_or_default(), why)),
+            }
+        }
+        (found, missing)
+    }
+
+    /// Whether the shared C76 BIOS can be found.
+    pub fn has_bios(&mut self, set: &Set) -> bool { self.missing(set.bios_parts()).1.is_empty() }
+
+    /// Whether every file of a set's game is in the zips with the right CRC: None if none of them are (the set's
+    /// romset isn't here at all), otherwise Ok or what is missing.
+    pub fn check(&mut self, set: &Set) -> Option<Result<(), String>> {
+        let (found, missing) = self.missing(set.game_parts());
+        if found == 0 {
+            return None;
+        }
+        if missing.is_empty() {
+            return Some(Ok(()));
+        }
+        if let Some((_, why)) = missing.iter().find(|(_, why)| !why.is_empty()) {
+            return Some(Err(why.clone()));
+        }
+        let names: Vec<&str> = missing.iter().map(|(n, _)| n.as_str()).collect();
+        let shown = if names.len() > 3 { format!("{}, ...", names[..3].join(", ")) } else { names.join(", ") };
+        Some(Err(format!("{} of its {} files missing: {shown}", names.len(), found + names.len())))
     }
 
     /// The set's ROM images by MRA index, as rom_packer.pack() makes them.
@@ -224,8 +255,11 @@ impl ZipSet {
                     Some(hex) => from_hex(hex)?,
                     None => {
                         let data = match self.find(part) {
-                            Found::Entry(zip, entry) => zip.read(entry)?,
-                            Found::Missing(e) | Found::Bad(e) => return Err(e),
+                            Ok((z, e)) => self.zips[z].read(&self.zips[z].entries[e])?,
+                            Err(why) if why.is_empty() => {
+                                return Err(format!("{} is not in any zip", part.name.as_deref().unwrap_or_default()))
+                            }
+                            Err(why) => return Err(why),
                         };
                         let start = part.offset.min(data.len());
                         let end = if part.length > 0 { (part.offset + part.length).min(data.len()) } else { data.len() };
