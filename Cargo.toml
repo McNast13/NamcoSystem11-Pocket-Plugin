@@ -1,6 +1,6 @@
 [package]
 name = "namco-system11-games"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 description = "Pocket Sync / pupdate plugin: installs the games for the Namco System 11 core from your own MAME zips"
 license = "GPL-3.0-only"
