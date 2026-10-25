@@ -1,0 +1,5 @@
+{
+  "name": "Namco System 11 games",
+  "description": "Installs the games for the Namco System 11 core from your own MAME romsets: put the zips (and namcoc76.zip) in Assets/namco_system11/common/ on the SD card, and it checks every file's CRC against the core's game list and writes the game files.",
+  "allowed_hosts": []
+}

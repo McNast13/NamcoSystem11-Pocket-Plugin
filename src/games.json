@@ -1,0 +1,1831 @@
+{
+ "platform": "namco_system11",
+ "core": "McNast13.NamcoSystem11",
+ "bank": 16777216,
+ "slot_of": [
+  [
+   0,
+   1
+  ],
+  [
+   1,
+   2
+  ],
+  [
+   2,
+   3
+  ],
+  [
+   3,
+   4
+  ],
+  [
+   6,
+   6
+  ],
+  [
+   7,
+   7
+  ]
+ ],
+ "bios": {
+  "filename": "c76.bin",
+  "md5": "8ca155e5ad03571e0930d8d361749b03"
+ },
+ "sets": [
+  {
+   "set": "danceyes",
+   "title": "Dancing Eyes (DC2/VER.B)",
+   "alt": false,
+   "instance": "Dancing Eyes (DC2-VER.B).json",
+   "roms": [
+    {
+     "index": 0,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "dc2verb.2l", "zips": ["danceyes.zip"], "crc": 2673892825, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "dc2verb.2j", "zips": ["danceyes.zip"], "crc": 554532386, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "dc1vera.2k", "zips": ["danceyes.zip"], "crc": 3185133646, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "dc1vera.2f", "zips": ["danceyes.zip"], "crc": 631435375, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 1,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "data": "1406"}
+     ]
+    },
+    {
+     "index": 3,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "dc1rom0l.ic5", "zips": ["danceyes.zip"], "crc": 2338016019, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "dc1rom0u.ic6", "zips": ["danceyes.zip"], "crc": 2479528912, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "dc1rom1l.ic3", "zips": ["danceyes.zip"], "crc": 940442242, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "dc1rom1u.ic8", "zips": ["danceyes.zip"], "crc": 1205429927, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "dc1rom2l.ic4", "zips": ["danceyes.zip"], "crc": 2400387616, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "dc1rom2u.ic7", "zips": ["danceyes.zip"], "crc": 609308102, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "dc1rom3l.ic1", "zips": ["danceyes.zip"], "crc": 2808859980, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "dc1rom3u.ic9", "zips": ["danceyes.zip"], "crc": 335925539, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 6,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "dc1sprog.6d", "zips": ["danceyes.zip"], "crc": 2530047880, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 7,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "dc1wave.8k", "zips": ["danceyes.zip"], "crc": 2342581927, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 8,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "c76.bin", "zips": ["namcoc76.zip"], "offset": 0, "length": 0}
+     ]
+    }
+   ]
+  },
+  {
+   "set": "dunkmnia",
+   "title": "Dunk Mania (DM2/VER.C)",
+   "alt": false,
+   "instance": "Dunk Mania (DM2-VER.C).json",
+   "roms": [
+    {
+     "index": 0,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "dm2verc.2l", "zips": ["dunkmnia.zip"], "crc": 4138124398, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "dm2verc.2j", "zips": ["dunkmnia.zip"], "crc": 502610382, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "dm1verc.2k", "zips": ["dunkmnia.zip"], "crc": 3369545592, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "dm1verc.2f", "zips": ["dunkmnia.zip"], "crc": 3547979689, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 1,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "data": "1403"}
+     ]
+    },
+    {
+     "index": 3,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "dm1rom0l.ic5", "zips": ["dunkmnia.zip"], "crc": 1270208285, "offset": 0, "length": 2097152},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "dm1rom0u.ic6", "zips": ["dunkmnia.zip"], "crc": 3245033413, "offset": 0, "length": 2097152},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "dm1rom1l.ic3", "zips": ["dunkmnia.zip"], "crc": 551367316, "offset": 0, "length": 2097152},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "dm1rom1u.ic8", "zips": ["dunkmnia.zip"], "crc": 32048595, "offset": 0, "length": 2097152}
+     ]
+    },
+    {
+     "index": 6,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "dm1sprog.6d", "zips": ["dunkmnia.zip"], "crc": 3726425208, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 7,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "dm1wave.8k", "zips": ["dunkmnia.zip"], "crc": 2285728853, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 8,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "c76.bin", "zips": ["namcoc76.zip"], "offset": 0, "length": 0}
+     ]
+    }
+   ]
+  },
+  {
+   "set": "myangel3",
+   "title": "Kosodate Quiz My Angel 3 (KQT1/VER.A)",
+   "alt": false,
+   "instance": "Kosodate Quiz My Angel 3 (KQT1-VER.A).json",
+   "roms": [
+    {
+     "index": 0,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "kqt1vera.1j", "zips": ["myangel3.zip"], "crc": 3749375882, "offset": 0, "length": 0},
+      {"unit": 1, "map": 0, "repeat": 1, "name": "kqt1vera.1l", "zips": ["myangel3.zip"], "crc": 4291107841, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 1,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "data": "1409"}
+     ]
+    },
+    {
+     "index": 3,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "kqt1prg0l.ic2", "zips": ["myangel3.zip"], "crc": 3598642790, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "kqt1prg0u.ic5", "zips": ["myangel3.zip"], "crc": 1293712371, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "kqt1prg1l.ic3", "zips": ["myangel3.zip"], "crc": 697143019, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "kqt1prg1u.ic6", "zips": ["myangel3.zip"], "crc": 2434237403, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 6,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "kqt1sprog.7e", "zips": ["myangel3.zip"], "crc": 3138947238, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 7,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "kqt1wave.8k", "zips": ["myangel3.zip"], "crc": 2462748239, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 8,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "c76.bin", "zips": ["namcoc76.zip"], "offset": 0, "length": 0}
+     ]
+    }
+   ]
+  },
+  {
+   "set": "pocketrc",
+   "title": "Pocket Racer (PKR1/VER.B)",
+   "alt": false,
+   "instance": "Pocket Racer (PKR1-VER.B).json",
+   "roms": [
+    {
+     "index": 0,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "pkr1verb.2l", "zips": ["pocketrc.zip"], "crc": 806195306, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "pkr1verb.2j", "zips": ["pocketrc.zip"], "crc": 3589567782, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 1,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "data": "1407"}
+     ]
+    },
+    {
+     "index": 3,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "pkr1rom0l.ic5", "zips": ["pocketrc.zip"], "crc": 1822099276, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "pkr1rom0u.ic6", "zips": ["pocketrc.zip"], "crc": 2774272262, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 6,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "pkr1verb.6d", "zips": ["pocketrc.zip"], "crc": 2616232338, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 7,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "pkr1wave.8k", "zips": ["pocketrc.zip"], "crc": 1917942854, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 8,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "c76.bin", "zips": ["namcoc76.zip"], "offset": 0, "length": 0}
+     ]
+    }
+   ]
+  },
+  {
+   "set": "ptblank2a",
+   "title": "Point Blank 2 (World, GNB2/VER.A)",
+   "alt": false,
+   "instance": "Point Blank 2 (World, GNB2-VER.A).json",
+   "roms": [
+    {
+     "index": 0,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "gnb2vera.2l", "zips": ["ptblank2a.zip", "ptblank2.zip"], "crc": 1227250077, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "gnb2vera.2j", "zips": ["ptblank2a.zip", "ptblank2.zip"], "crc": 716868617, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "gnb1vera.2k", "zips": ["ptblank2a.zip", "ptblank2.zip"], "crc": 3862126158, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "gnb1vera.2f", "zips": ["ptblank2a.zip", "ptblank2.zip"], "crc": 733473645, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 1,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "data": "14090100"}
+     ]
+    },
+    {
+     "index": 3,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "gnb2prg.1", "zips": ["ptblank2a.zip", "ptblank2.zip"], "crc": 2324592579, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "gnb2prg.2", "zips": ["ptblank2a.zip", "ptblank2.zip"], "crc": 1446960191, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "gnb2prg.3", "zips": ["ptblank2a.zip", "ptblank2.zip"], "crc": 2499536691, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "gnb2prg.4", "zips": ["ptblank2a.zip", "ptblank2.zip"], "crc": 482245030, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 6,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "gnb1vera.6d", "zips": ["ptblank2a.zip", "ptblank2.zip"], "crc": 1684123255, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 7,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "gnb1wave.8k", "zips": ["ptblank2a.zip", "ptblank2.zip"], "crc": 1310317014, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 8,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "c76.bin", "zips": ["namcoc76.zip"], "offset": 0, "length": 0}
+     ]
+    }
+   ]
+  },
+  {
+   "set": "primglex",
+   "title": "Prime Goal EX (PG1/VER.A)",
+   "alt": false,
+   "instance": "Prime Goal EX (PG1-VER.A).json",
+   "roms": [
+    {
+     "index": 0,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "pg1vera.2l", "zips": ["primglex.zip"], "crc": 4229299482, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "pg1vera.2j", "zips": ["primglex.zip"], "crc": 2039829843, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 1,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "data": "1404"}
+     ]
+    },
+    {
+     "index": 3,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "pg1rom0u.ic5", "zips": ["primglex.zip"], "crc": 709902127, "offset": 0, "length": 2097152},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "pg1rom0l.ic6", "zips": ["primglex.zip"], "crc": 1422850450, "offset": 0, "length": 2097152},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "pg1rom1u.ic3", "zips": ["primglex.zip"], "crc": 518263122, "offset": 0, "length": 2097152},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "pg1rom1l.ic8", "zips": ["primglex.zip"], "crc": 1505077020, "offset": 0, "length": 2097152}
+     ]
+    },
+    {
+     "index": 6,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "pg1sprog.6d", "zips": ["primglex.zip"], "crc": 3888331117, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 7,
+     "parts": [
+      {"unit": 2, "map": 33, "repeat": 1, "name": "pg1wave.8k", "zips": ["primglex.zip"], "crc": 4238006763, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 8,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "c76.bin", "zips": ["namcoc76.zip"], "offset": 0, "length": 0}
+     ]
+    }
+   ]
+  },
+  {
+   "set": "souledge",
+   "title": "Soul Edge Ver. II (SO4/VER.C)",
+   "alt": false,
+   "instance": "Soul Edge Ver. II (SO4-VER.C).json",
+   "roms": [
+    {
+     "index": 0,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "so4verc.2l", "zips": ["souledge.zip"], "crc": 314093069, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "so4verc.2j", "zips": ["souledge.zip"], "crc": 2474795696, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "so1verc.2k", "zips": ["souledge.zip"], "crc": 394912665, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "so1verc.2f", "zips": ["souledge.zip"], "crc": 2365579715, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 1,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "data": "1402"}
+     ]
+    },
+    {
+     "index": 3,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "so1rom0u.ic5", "zips": ["souledge.zip"], "crc": 3815036531, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "so1rom0l.ic6", "zips": ["souledge.zip"], "crc": 2623211608, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "so1rom1u.ic3", "zips": ["souledge.zip"], "crc": 2409466971, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "so1rom1l.ic8", "zips": ["souledge.zip"], "crc": 1141305110, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "so1rom2u.ic4", "zips": ["souledge.zip"], "crc": 3032131718, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "so1rom2l.ic7", "zips": ["souledge.zip"], "crc": 935458414, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "so1rom3u.ic1", "zips": ["souledge.zip"], "crc": 4045133089, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "so1rom3l.ic9", "zips": ["souledge.zip"], "crc": 2219203532, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 6,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "so1sprogc.6d", "zips": ["souledge.zip"], "crc": 733745548, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 7,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "so1wave.8k", "zips": ["souledge.zip"], "crc": 241730411, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 8,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "c76.bin", "zips": ["namcoc76.zip"], "offset": 0, "length": 0}
+     ]
+    }
+   ]
+  },
+  {
+   "set": "starswep",
+   "title": "Star Sweep (STP1/VER.A)",
+   "alt": false,
+   "instance": "Star Sweep (STP1-VER.A).json",
+   "roms": [
+    {
+     "index": 0,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "stp2vera.2l", "zips": ["starswep.zip"], "crc": 2688502700, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "stp2vera.2j", "zips": ["starswep.zip"], "crc": 1494065202, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "stp2vera.2k", "zips": ["starswep.zip"], "crc": 2894534613, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "stp2vera.2f", "zips": ["starswep.zip"], "crc": 1114845961, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 1,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "data": "1408"}
+     ]
+    },
+    {
+     "index": 6,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "stp2vera.6d", "zips": ["starswep.zip"], "crc": 145403754, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 7,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "stp1wave.8k", "zips": ["starswep.zip"], "crc": 418582162, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 8,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "c76.bin", "zips": ["namcoc76.zip"], "offset": 0, "length": 0}
+     ]
+    }
+   ]
+  },
+  {
+   "set": "tekken",
+   "title": "Tekken (TE2/VER.C)",
+   "alt": false,
+   "instance": "Tekken (TE2-VER.C).json",
+   "roms": [
+    {
+     "index": 0,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "te2verc.2l", "zips": ["tekken.zip"], "crc": 2722925655, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "te2verc.2j", "zips": ["tekken.zip"], "crc": 841269912, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "te1verb.2k", "zips": ["tekken.zip"], "crc": 3112569641, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "te1verb.2f", "zips": ["tekken.zip"], "crc": 1035999917, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 1,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "data": "14"}
+     ]
+    },
+    {
+     "index": 3,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "te1rom0l.ic5", "zips": ["tekken.zip"], "crc": 58224137, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "te1rom0u.ic6", "zips": ["tekken.zip"], "crc": 1977159761, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "te1rom1l.ic3", "zips": ["tekken.zip"], "crc": 2168549262, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "te1rom1u.ic8", "zips": ["tekken.zip"], "crc": 4202406963, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "te1rom2l.ic4", "zips": ["tekken.zip"], "crc": 1104640070, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "te1rom2u.ic7", "zips": ["tekken.zip"], "crc": 2792921214, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 6,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "te1sprog.6d", "zips": ["tekken.zip"], "crc": 2224392169, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 7,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "te1wave.8k", "zips": ["tekken.zip"], "crc": 4242982266, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 8,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "c76.bin", "zips": ["namcoc76.zip"], "offset": 0, "length": 0}
+     ]
+    }
+   ]
+  },
+  {
+   "set": "tekken2",
+   "title": "Tekken 2 Ver.B (TES2/VER.D)",
+   "alt": false,
+   "instance": "Tekken 2 Ver.B (TES2-VER.D).json",
+   "roms": [
+    {
+     "index": 0,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes2verd.2l", "zips": ["tekken2.zip"], "crc": 451886504, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes2verd.2j", "zips": ["tekken2.zip"], "crc": 58228688, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1verd.2k", "zips": ["tekken2.zip"], "crc": 2221592074, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1verd.2f", "zips": ["tekken2.zip"], "crc": 2047239092, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 1,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "data": "1401"}
+     ]
+    },
+    {
+     "index": 3,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1rom0l.ic6", "zips": ["tekken2.zip"], "crc": 4237315806, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1rom0u.ic5", "zips": ["tekken2.zip"], "crc": 1471385437, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1rom1l.ic8", "zips": ["tekken2.zip"], "crc": 2856906827, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1rom1u.ic3", "zips": ["tekken2.zip"], "crc": 2974270787, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1rom2l.ic7", "zips": ["tekken2.zip"], "crc": 2962072876, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1rom2u.ic4", "zips": ["tekken2.zip"], "crc": 2316657080, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1rom3l.ic9", "zips": ["tekken2.zip"], "crc": 3584823064, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1rom3u.ic1", "zips": ["tekken2.zip"], "crc": 1156403357, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 6,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "tes1sprog.6d", "zips": ["tekken2.zip"], "crc": 2937615775, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 7,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "tes1wave.8k", "zips": ["tekken2.zip"], "crc": 883117739, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 8,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "c76.bin", "zips": ["namcoc76.zip"], "offset": 0, "length": 0}
+     ]
+    }
+   ]
+  },
+  {
+   "set": "xevi3dg",
+   "title": "Xevious 3D/G (XV32/VER.B)",
+   "alt": false,
+   "instance": "Xevious 3D-G (XV32-VER.B).json",
+   "roms": [
+    {
+     "index": 0,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "xv32verb.2l", "zips": ["xevi3dg.zip"], "crc": 1878838956, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "xv32verb.2j", "zips": ["xevi3dg.zip"], "crc": 3231112472, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "xv31vera.2k", "zips": ["xevi3dg.zip"], "crc": 1029182350, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "xv31vera.2f", "zips": ["xevi3dg.zip"], "crc": 2659680418, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 1,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "data": "1405"}
+     ]
+    },
+    {
+     "index": 3,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "xv31rom0l.ic5", "zips": ["xevi3dg.zip"], "crc": 618783330, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "xv31rom0u.ic6", "zips": ["xevi3dg.zip"], "crc": 3403910899, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "xv31rom1l.ic3", "zips": ["xevi3dg.zip"], "crc": 1186253682, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "xv31rom1u.ic8", "zips": ["xevi3dg.zip"], "crc": 3188635089, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "xv31rom2l.ic4", "zips": ["xevi3dg.zip"], "crc": 2214830711, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "xv31rom2u.ic7", "zips": ["xevi3dg.zip"], "crc": 3975611442, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 6,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "xv31sprog.6d", "zips": ["xevi3dg.zip"], "crc": 3842737514, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 7,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "xv31wave.8k", "zips": ["xevi3dg.zip"], "crc": 351428061, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 8,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "c76.bin", "zips": ["namcoc76.zip"], "offset": 0, "length": 0}
+     ]
+    }
+   ]
+  },
+  {
+   "set": "danceyesj",
+   "title": "Dancing Eyes (Japan, DC1/VER.A)",
+   "alt": true,
+   "instance": "_alternatives/Dancing Eyes (Japan, DC1-VER.A).json",
+   "roms": [
+    {
+     "index": 0,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "dc1vera.2l", "zips": ["danceyesj.zip", "danceyes.zip"], "crc": 2976165223, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "dc1vera.2j", "zips": ["danceyesj.zip", "danceyes.zip"], "crc": 686082877, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "dc1vera.2k", "zips": ["danceyesj.zip", "danceyes.zip"], "crc": 3185133646, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "dc1vera.2f", "zips": ["danceyesj.zip", "danceyes.zip"], "crc": 631435375, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 1,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "data": "1406"}
+     ]
+    },
+    {
+     "index": 3,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "dc1rom0l.ic5", "zips": ["danceyesj.zip", "danceyes.zip"], "crc": 2338016019, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "dc1rom0u.ic6", "zips": ["danceyesj.zip", "danceyes.zip"], "crc": 2479528912, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "dc1rom1l.ic3", "zips": ["danceyesj.zip", "danceyes.zip"], "crc": 940442242, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "dc1rom1u.ic8", "zips": ["danceyesj.zip", "danceyes.zip"], "crc": 1205429927, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "dc1rom2l.ic4", "zips": ["danceyesj.zip", "danceyes.zip"], "crc": 2400387616, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "dc1rom2u.ic7", "zips": ["danceyesj.zip", "danceyes.zip"], "crc": 609308102, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "dc1rom3l.ic1", "zips": ["danceyesj.zip", "danceyes.zip"], "crc": 2808859980, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "dc1rom3u.ic9", "zips": ["danceyesj.zip", "danceyes.zip"], "crc": 335925539, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 6,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "dc1sprog.6d", "zips": ["danceyesj.zip", "danceyes.zip"], "crc": 2530047880, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 7,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "dc1wave.8k", "zips": ["danceyesj.zip", "danceyes.zip"], "crc": 2342581927, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 8,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "c76.bin", "zips": ["namcoc76.zip"], "offset": 0, "length": 0}
+     ]
+    }
+   ]
+  },
+  {
+   "set": "danceyesu",
+   "title": "Dancing Eyes (US, DC3/VER.C)",
+   "alt": true,
+   "instance": "_alternatives/Dancing Eyes (US, DC3-VER.C).json",
+   "roms": [
+    {
+     "index": 0,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "dc3verc.2l", "zips": ["danceyesu.zip", "danceyes.zip"], "crc": 2812283846, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "dc3verc.2j", "zips": ["danceyesu.zip", "danceyes.zip"], "crc": 50078741, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "dc1vera.2k", "zips": ["danceyesu.zip", "danceyes.zip"], "crc": 3185133646, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "dc1vera.2f", "zips": ["danceyesu.zip", "danceyes.zip"], "crc": 631435375, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 1,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "data": "1406"}
+     ]
+    },
+    {
+     "index": 3,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "dc1rom0l.ic5", "zips": ["danceyesu.zip", "danceyes.zip"], "crc": 2338016019, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "dc1rom0u.ic6", "zips": ["danceyesu.zip", "danceyes.zip"], "crc": 2479528912, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "dc1rom1l.ic3", "zips": ["danceyesu.zip", "danceyes.zip"], "crc": 940442242, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "dc1rom1u.ic8", "zips": ["danceyesu.zip", "danceyes.zip"], "crc": 1205429927, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "dc1rom2l.ic4", "zips": ["danceyesu.zip", "danceyes.zip"], "crc": 2400387616, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "dc1rom2u.ic7", "zips": ["danceyesu.zip", "danceyes.zip"], "crc": 609308102, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "dc1rom3l.ic1", "zips": ["danceyesu.zip", "danceyes.zip"], "crc": 2808859980, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "dc1rom3u.ic9", "zips": ["danceyesu.zip", "danceyes.zip"], "crc": 335925539, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 6,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "dc1sprog.6d", "zips": ["danceyesu.zip", "danceyes.zip"], "crc": 2530047880, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 7,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "dc1wave.8k", "zips": ["danceyesu.zip", "danceyes.zip"], "crc": 2342581927, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 8,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "c76.bin", "zips": ["namcoc76.zip"], "offset": 0, "length": 0}
+     ]
+    }
+   ]
+  },
+  {
+   "set": "dunkmniajc",
+   "title": "Dunk Mania (Japan, DM1/VER.C)",
+   "alt": true,
+   "instance": "_alternatives/Dunk Mania (Japan, DM1-VER.C).json",
+   "roms": [
+    {
+     "index": 0,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "dm1verc.2l", "zips": ["dunkmniajc.zip", "dunkmnia.zip"], "crc": 1820419402, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "dm1verc.2j", "zips": ["dunkmniajc.zip", "dunkmnia.zip"], "crc": 271752062, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "dm1verc.2k", "zips": ["dunkmniajc.zip", "dunkmnia.zip"], "crc": 3369545592, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "dm1verc.2f", "zips": ["dunkmniajc.zip", "dunkmnia.zip"], "crc": 3547979689, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 1,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "data": "1403"}
+     ]
+    },
+    {
+     "index": 3,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "dm1rom0l.ic5", "zips": ["dunkmniajc.zip", "dunkmnia.zip"], "crc": 1270208285, "offset": 0, "length": 2097152},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "dm1rom0u.ic6", "zips": ["dunkmniajc.zip", "dunkmnia.zip"], "crc": 3245033413, "offset": 0, "length": 2097152},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "dm1rom1l.ic3", "zips": ["dunkmniajc.zip", "dunkmnia.zip"], "crc": 551367316, "offset": 0, "length": 2097152},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "dm1rom1u.ic8", "zips": ["dunkmniajc.zip", "dunkmnia.zip"], "crc": 32048595, "offset": 0, "length": 2097152}
+     ]
+    },
+    {
+     "index": 6,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "dm1sprog.6d", "zips": ["dunkmniajc.zip", "dunkmnia.zip"], "crc": 3726425208, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 7,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "dm1wave.8k", "zips": ["dunkmniajc.zip", "dunkmnia.zip"], "crc": 2285728853, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 8,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "c76.bin", "zips": ["namcoc76.zip"], "offset": 0, "length": 0}
+     ]
+    }
+   ]
+  },
+  {
+   "set": "gunbarla",
+   "title": "Gunbarl (Japan, GNB1/VER.A)",
+   "alt": true,
+   "instance": "_alternatives/Gunbarl (Japan, GNB1-VER.A).json",
+   "roms": [
+    {
+     "index": 0,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "gnb1vera.2l", "zips": ["gunbarla.zip", "ptblank2.zip"], "crc": 1079911813, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "gnb1vera.2j", "zips": ["gunbarla.zip", "ptblank2.zip"], "crc": 757790927, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "gnb1vera.2k", "zips": ["gunbarla.zip", "ptblank2.zip"], "crc": 3862126158, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "gnb1vera.2f", "zips": ["gunbarla.zip", "ptblank2.zip"], "crc": 733473645, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 1,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "data": "14090100"}
+     ]
+    },
+    {
+     "index": 3,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "gnb1prg0l.ic2", "zips": ["gunbarla.zip", "ptblank2.zip"], "crc": 2020892727, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "gnb1prg0u.ic5", "zips": ["gunbarla.zip", "ptblank2.zip"], "crc": 1769812601, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 6,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "gnb1vera.6d", "zips": ["gunbarla.zip", "ptblank2.zip"], "crc": 1684123255, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 7,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "gnb1wave.8k", "zips": ["gunbarla.zip", "ptblank2.zip"], "crc": 1310317014, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 8,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "c76.bin", "zips": ["namcoc76.zip"], "offset": 0, "length": 0}
+     ]
+    }
+   ]
+  },
+  {
+   "set": "ptblank2ua",
+   "title": "Point Blank 2 (US, GNB3/VER.A)",
+   "alt": true,
+   "instance": "_alternatives/Point Blank 2 (US, GNB3-VER.A).json",
+   "roms": [
+    {
+     "index": 0,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "gnb3vera.2l", "zips": ["ptblank2ua.zip", "ptblank2.zip"], "crc": 1470984602, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "gnb3vera.2j", "zips": ["ptblank2ua.zip", "ptblank2.zip"], "crc": 58240920, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "gnb1vera.2k", "zips": ["ptblank2ua.zip", "ptblank2.zip"], "crc": 3862126158, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "gnb1vera.2f", "zips": ["ptblank2ua.zip", "ptblank2.zip"], "crc": 733473645, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 1,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "data": "14090100"}
+     ]
+    },
+    {
+     "index": 3,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "gnb1prg0l.ic2", "zips": ["ptblank2ua.zip", "ptblank2.zip"], "crc": 2020892727, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "gnb1prg0u.ic5", "zips": ["ptblank2ua.zip", "ptblank2.zip"], "crc": 1769812601, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 6,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "gnb1vera.6d", "zips": ["ptblank2ua.zip", "ptblank2.zip"], "crc": 1684123255, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 7,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "gnb1wave.8k", "zips": ["ptblank2ua.zip", "ptblank2.zip"], "crc": 1310317014, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 8,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "c76.bin", "zips": ["namcoc76.zip"], "offset": 0, "length": 0}
+     ]
+    }
+   ]
+  },
+  {
+   "set": "ptblank2b",
+   "title": "Point Blank 2 (World, GNB2/VER.A alt)",
+   "alt": true,
+   "instance": "_alternatives/Point Blank 2 (World, GNB2-VER.A alt).json",
+   "roms": [
+    {
+     "index": 0,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "gnb2vera.1j", "zips": ["ptblank2b.zip", "ptblank2.zip"], "crc": 3742090736, "offset": 0, "length": 0},
+      {"unit": 1, "map": 0, "repeat": 1, "name": "gnb2vera.1l", "zips": ["ptblank2b.zip", "ptblank2.zip"], "crc": 2317831574, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 1,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "data": "14090100"}
+     ]
+    },
+    {
+     "index": 3,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "gnb2prg.1", "zips": ["ptblank2b.zip", "ptblank2.zip"], "crc": 2324592579, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "gnb2prg.2", "zips": ["ptblank2b.zip", "ptblank2.zip"], "crc": 1446960191, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "gnb2prg.3", "zips": ["ptblank2b.zip", "ptblank2.zip"], "crc": 2499536691, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "gnb2prg.4", "zips": ["ptblank2b.zip", "ptblank2.zip"], "crc": 482245030, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 6,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "gnb1vera.7e", "zips": ["ptblank2b.zip", "ptblank2.zip"], "crc": 1684123255, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 7,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "gnb1wave.8k", "zips": ["ptblank2b.zip", "ptblank2.zip"], "crc": 1310317014, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 8,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "c76.bin", "zips": ["namcoc76.zip"], "offset": 0, "length": 0}
+     ]
+    }
+   ]
+  },
+  {
+   "set": "ptblank2c",
+   "title": "Point Blank 2 (World, unknown version)",
+   "alt": true,
+   "instance": "_alternatives/Point Blank 2 (World, unknown version).json",
+   "roms": [
+    {
+     "index": 0,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "gnb2verx.2l", "zips": ["ptblank2c.zip", "ptblank2.zip"], "crc": 3265277135, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "gnb2verx.2j", "zips": ["ptblank2c.zip", "ptblank2.zip"], "crc": 2527844166, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "gnb1vera.2k", "zips": ["ptblank2c.zip", "ptblank2.zip"], "crc": 3862126158, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "gnb1vera.2f", "zips": ["ptblank2c.zip", "ptblank2.zip"], "crc": 733473645, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 1,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "data": "14090100"}
+     ]
+    },
+    {
+     "index": 3,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "gnb2prg.1", "zips": ["ptblank2c.zip", "ptblank2.zip"], "crc": 2324592579, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "gnb2prg.2", "zips": ["ptblank2c.zip", "ptblank2.zip"], "crc": 1446960191, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "gnb2prg.3", "zips": ["ptblank2c.zip", "ptblank2.zip"], "crc": 2499536691, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "gnb2prg.4", "zips": ["ptblank2c.zip", "ptblank2.zip"], "crc": 482245030, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 6,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "gnb1vera.6d", "zips": ["ptblank2c.zip", "ptblank2.zip"], "crc": 1684123255, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 7,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "gnb1wave.8k", "zips": ["ptblank2c.zip", "ptblank2.zip"], "crc": 1310317014, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 8,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "c76.bin", "zips": ["namcoc76.zip"], "offset": 0, "length": 0}
+     ]
+    }
+   ]
+  },
+  {
+   "set": "souledgeja",
+   "title": "Soul Edge (Japan, SO1/VER.A)",
+   "alt": true,
+   "instance": "_alternatives/Soul Edge (Japan, SO1-VER.A).json",
+   "roms": [
+    {
+     "index": 0,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "so1vera.2l", "zips": ["souledgeja.zip", "souledge.zip"], "crc": 3137049800, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "so1vera.2j", "zips": ["souledgeja.zip", "souledge.zip"], "crc": 2883768974, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "so1vera.2k", "zips": ["souledgeja.zip", "souledge.zip"], "crc": 700303035, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "so1vera.2f", "zips": ["souledgeja.zip", "souledge.zip"], "crc": 3224745755, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 1,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "data": "1402"}
+     ]
+    },
+    {
+     "index": 3,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "so1rom0u.ic5", "zips": ["souledgeja.zip", "souledge.zip"], "crc": 3815036531, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "so1rom0l.ic6", "zips": ["souledgeja.zip", "souledge.zip"], "crc": 2623211608, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "so1rom1u.ic3", "zips": ["souledgeja.zip", "souledge.zip"], "crc": 2409466971, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "so1rom1l.ic8", "zips": ["souledgeja.zip", "souledge.zip"], "crc": 1141305110, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "so1rom2u.ic4", "zips": ["souledgeja.zip", "souledge.zip"], "crc": 3032131718, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "so1rom2l.ic7", "zips": ["souledgeja.zip", "souledge.zip"], "crc": 935458414, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "so1rom3u.ic1", "zips": ["souledgeja.zip", "souledge.zip"], "crc": 4045133089, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "so1rom3l.ic9", "zips": ["souledgeja.zip", "souledge.zip"], "crc": 2219203532, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 6,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "so1sprog.6d", "zips": ["souledgeja.zip", "souledge.zip"], "crc": 4143350455, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 7,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "so1wave.8k", "zips": ["souledgeja.zip", "souledge.zip"], "crc": 241730411, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 8,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "c76.bin", "zips": ["namcoc76.zip"], "offset": 0, "length": 0}
+     ]
+    }
+   ]
+  },
+  {
+   "set": "souledgeua",
+   "title": "Soul Edge (US, SO3/VER.A)",
+   "alt": true,
+   "instance": "_alternatives/Soul Edge (US, SO3-VER.A).json",
+   "roms": [
+    {
+     "index": 0,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "so3vera.2l", "zips": ["souledgeua.zip", "souledge.zip"], "crc": 431198358, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "so3vera.2j", "zips": ["souledgeua.zip", "souledge.zip"], "crc": 166569071, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "so1vera.2k", "zips": ["souledgeua.zip", "souledge.zip"], "crc": 700303035, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "so1vera.2f", "zips": ["souledgeua.zip", "souledge.zip"], "crc": 3224745755, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 1,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "data": "1402"}
+     ]
+    },
+    {
+     "index": 3,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "so1rom0u.ic5", "zips": ["souledgeua.zip", "souledge.zip"], "crc": 3815036531, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "so1rom0l.ic6", "zips": ["souledgeua.zip", "souledge.zip"], "crc": 2623211608, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "so1rom1u.ic3", "zips": ["souledgeua.zip", "souledge.zip"], "crc": 2409466971, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "so1rom1l.ic8", "zips": ["souledgeua.zip", "souledge.zip"], "crc": 1141305110, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "so1rom2u.ic4", "zips": ["souledgeua.zip", "souledge.zip"], "crc": 3032131718, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "so1rom2l.ic7", "zips": ["souledgeua.zip", "souledge.zip"], "crc": 935458414, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "so1rom3u.ic1", "zips": ["souledgeua.zip", "souledge.zip"], "crc": 4045133089, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "so1rom3l.ic9", "zips": ["souledgeua.zip", "souledge.zip"], "crc": 2219203532, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 6,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "so1sprog.6d", "zips": ["souledgeua.zip", "souledge.zip"], "crc": 4143350455, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 7,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "so1wave.8k", "zips": ["souledgeua.zip", "souledge.zip"], "crc": 241730411, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 8,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "c76.bin", "zips": ["namcoc76.zip"], "offset": 0, "length": 0}
+     ]
+    }
+   ]
+  },
+  {
+   "set": "souledgea",
+   "title": "Soul Edge (World, SO2/VER.A)",
+   "alt": true,
+   "instance": "_alternatives/Soul Edge (World, SO2-VER.A).json",
+   "roms": [
+    {
+     "index": 0,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "so2vera.2l", "zips": ["souledgea.zip", "souledge.zip"], "crc": 245300316, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "so2vera.2j", "zips": ["souledgea.zip", "souledge.zip"], "crc": 4255130613, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "so2vera.2k", "zips": ["souledgea.zip", "souledge.zip"], "crc": 700303035, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "so2vera.2f", "zips": ["souledgea.zip", "souledge.zip"], "crc": 3224745755, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 1,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "data": "1402"}
+     ]
+    },
+    {
+     "index": 3,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "so1rom0u.ic5", "zips": ["souledgea.zip", "souledge.zip"], "crc": 3815036531, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "so1rom0l.ic6", "zips": ["souledgea.zip", "souledge.zip"], "crc": 2623211608, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "so1rom1u.ic3", "zips": ["souledgea.zip", "souledge.zip"], "crc": 2409466971, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "so1rom1l.ic8", "zips": ["souledgea.zip", "souledge.zip"], "crc": 1141305110, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "so1rom2u.ic4", "zips": ["souledgea.zip", "souledge.zip"], "crc": 3032131718, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "so1rom2l.ic7", "zips": ["souledgea.zip", "souledge.zip"], "crc": 935458414, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "so1rom3u.ic1", "zips": ["souledgea.zip", "souledge.zip"], "crc": 4045133089, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "so1rom3l.ic9", "zips": ["souledgea.zip", "souledge.zip"], "crc": 2219203532, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 6,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "so1sprog.6d", "zips": ["souledgea.zip", "souledge.zip"], "crc": 4143350455, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 7,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "so1wave.8k", "zips": ["souledgea.zip", "souledge.zip"], "crc": 241730411, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 8,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "c76.bin", "zips": ["namcoc76.zip"], "offset": 0, "length": 0}
+     ]
+    }
+   ]
+  },
+  {
+   "set": "souledgeuc",
+   "title": "Soul Edge Ver. II (US, SO3/VER.C)",
+   "alt": true,
+   "instance": "_alternatives/Soul Edge Ver. II (US, SO3-VER.C).json",
+   "roms": [
+    {
+     "index": 0,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "so3verc.2l", "zips": ["souledgeuc.zip", "souledge.zip"], "crc": 3373151291, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "so3verc.2j", "zips": ["souledgeuc.zip", "souledge.zip"], "crc": 3074846133, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "so1verc.2k", "zips": ["souledgeuc.zip", "souledge.zip"], "crc": 394912665, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "so1verc.2f", "zips": ["souledgeuc.zip", "souledge.zip"], "crc": 2365579715, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 1,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "data": "1402"}
+     ]
+    },
+    {
+     "index": 3,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "so1rom0u.ic5", "zips": ["souledgeuc.zip", "souledge.zip"], "crc": 3815036531, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "so1rom0l.ic6", "zips": ["souledgeuc.zip", "souledge.zip"], "crc": 2623211608, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "so1rom1u.ic3", "zips": ["souledgeuc.zip", "souledge.zip"], "crc": 2409466971, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "so1rom1l.ic8", "zips": ["souledgeuc.zip", "souledge.zip"], "crc": 1141305110, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "so1rom2u.ic4", "zips": ["souledgeuc.zip", "souledge.zip"], "crc": 3032131718, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "so1rom2l.ic7", "zips": ["souledgeuc.zip", "souledge.zip"], "crc": 935458414, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "so1rom3u.ic1", "zips": ["souledgeuc.zip", "souledge.zip"], "crc": 4045133089, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "so1rom3l.ic9", "zips": ["souledgeuc.zip", "souledge.zip"], "crc": 2219203532, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 6,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "so1sprogc.6d", "zips": ["souledgeuc.zip", "souledge.zip"], "crc": 733745548, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 7,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "so1wave.8k", "zips": ["souledgeuc.zip", "souledge.zip"], "crc": 241730411, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 8,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "c76.bin", "zips": ["namcoc76.zip"], "offset": 0, "length": 0}
+     ]
+    }
+   ]
+  },
+  {
+   "set": "starswepj",
+   "title": "Star Sweep (Japan, STP1/VER.A)",
+   "alt": true,
+   "instance": "_alternatives/Star Sweep (Japan, STP1-VER.A).json",
+   "roms": [
+    {
+     "index": 0,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "stp1vera.1j", "zips": ["starswepj.zip", "starswep.zip"], "crc": 4018397478, "offset": 0, "length": 0},
+      {"unit": 1, "map": 0, "repeat": 1, "name": "stp1vera.1l", "zips": ["starswepj.zip", "starswep.zip"], "crc": 250084894, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 1,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "data": "1408"}
+     ]
+    },
+    {
+     "index": 6,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "stp1sprog.7e", "zips": ["starswepj.zip", "starswep.zip"], "crc": 145403754, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 7,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "stp1wave.8k", "zips": ["starswepj.zip", "starswep.zip"], "crc": 418582162, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 8,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "c76.bin", "zips": ["namcoc76.zip"], "offset": 0, "length": 0}
+     ]
+    }
+   ]
+  },
+  {
+   "set": "tekken2ua",
+   "title": "Tekken 2 (US, TES3/VER.A)",
+   "alt": true,
+   "instance": "_alternatives/Tekken 2 (US, TES3-VER.A).json",
+   "roms": [
+    {
+     "index": 0,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes3vera.2l", "zips": ["tekken2ua.zip", "tekken2.zip"], "crc": 41314315, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes3vera.2j", "zips": ["tekken2ua.zip", "tekken2.zip"], "crc": 2162800108, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1vera.2k", "zips": ["tekken2ua.zip", "tekken2.zip"], "crc": 2028129818, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1vera.2f", "zips": ["tekken2ua.zip", "tekken2.zip"], "crc": 4222660934, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 1,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "data": "3401"}
+     ]
+    },
+    {
+     "index": 3,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1rom0l.ic6", "zips": ["tekken2ua.zip", "tekken2.zip"], "crc": 4237315806, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1rom0u.ic5", "zips": ["tekken2ua.zip", "tekken2.zip"], "crc": 1471385437, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1rom1l.ic8", "zips": ["tekken2ua.zip", "tekken2.zip"], "crc": 2856906827, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1rom1u.ic3", "zips": ["tekken2ua.zip", "tekken2.zip"], "crc": 2974270787, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1rom2l.ic7", "zips": ["tekken2ua.zip", "tekken2.zip"], "crc": 2962072876, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1rom2u.ic4", "zips": ["tekken2ua.zip", "tekken2.zip"], "crc": 2316657080, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1rom3l.ic9", "zips": ["tekken2ua.zip", "tekken2.zip"], "crc": 3584823064, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1rom3u.ic1", "zips": ["tekken2ua.zip", "tekken2.zip"], "crc": 1156403357, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 6,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "tes1sprog.6d", "zips": ["tekken2ua.zip", "tekken2.zip"], "crc": 2937615775, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 7,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "tes1wave.8k", "zips": ["tekken2ua.zip", "tekken2.zip"], "crc": 883117739, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 8,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "c76.bin", "zips": ["namcoc76.zip"], "offset": 0, "length": 0}
+     ]
+    }
+   ]
+  },
+  {
+   "set": "tekken2a",
+   "title": "Tekken 2 (World, TES2/VER.A)",
+   "alt": true,
+   "instance": "_alternatives/Tekken 2 (World, TES2-VER.A).json",
+   "roms": [
+    {
+     "index": 0,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes2vera.2l", "zips": ["tekken2a.zip", "tekken2.zip"], "crc": 2344102896, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes2vera.2j", "zips": ["tekken2a.zip", "tekken2.zip"], "crc": 1308817697, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1vera.2k", "zips": ["tekken2a.zip", "tekken2.zip"], "crc": 2028129818, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1vera.2f", "zips": ["tekken2a.zip", "tekken2.zip"], "crc": 4222660934, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 1,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "data": "3401"}
+     ]
+    },
+    {
+     "index": 3,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1rom0l.ic6", "zips": ["tekken2a.zip", "tekken2.zip"], "crc": 4237315806, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1rom0u.ic5", "zips": ["tekken2a.zip", "tekken2.zip"], "crc": 1471385437, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1rom1l.ic8", "zips": ["tekken2a.zip", "tekken2.zip"], "crc": 2856906827, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1rom1u.ic3", "zips": ["tekken2a.zip", "tekken2.zip"], "crc": 2974270787, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1rom2l.ic7", "zips": ["tekken2a.zip", "tekken2.zip"], "crc": 2962072876, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1rom2u.ic4", "zips": ["tekken2a.zip", "tekken2.zip"], "crc": 2316657080, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1rom3l.ic9", "zips": ["tekken2a.zip", "tekken2.zip"], "crc": 3584823064, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1rom3u.ic1", "zips": ["tekken2a.zip", "tekken2.zip"], "crc": 1156403357, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 6,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "tes1sprog.6d", "zips": ["tekken2a.zip", "tekken2.zip"], "crc": 2937615775, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 7,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "tes1wave.8k", "zips": ["tekken2a.zip", "tekken2.zip"], "crc": 883117739, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 8,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "c76.bin", "zips": ["namcoc76.zip"], "offset": 0, "length": 0}
+     ]
+    }
+   ]
+  },
+  {
+   "set": "tekken2jb",
+   "title": "Tekken 2 Ver.B (Japan, TES1/VER.B)",
+   "alt": true,
+   "instance": "_alternatives/Tekken 2 Ver.B (Japan, TES1-VER.B).json",
+   "roms": [
+    {
+     "index": 0,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1verb.2l", "zips": ["tekken2jb.zip", "tekken2.zip"], "crc": 2620602169, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1verb.2j", "zips": ["tekken2jb.zip", "tekken2.zip"], "crc": 3700226794, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1verb.2k", "zips": ["tekken2jb.zip", "tekken2.zip"], "crc": 1720493842, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1verb.2f", "zips": ["tekken2jb.zip", "tekken2.zip"], "crc": 3304483338, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 1,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "data": "3401"}
+     ]
+    },
+    {
+     "index": 3,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1rom0l.ic6", "zips": ["tekken2jb.zip", "tekken2.zip"], "crc": 4237315806, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1rom0u.ic5", "zips": ["tekken2jb.zip", "tekken2.zip"], "crc": 1471385437, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1rom1l.ic8", "zips": ["tekken2jb.zip", "tekken2.zip"], "crc": 2856906827, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1rom1u.ic3", "zips": ["tekken2jb.zip", "tekken2.zip"], "crc": 2974270787, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1rom2l.ic7", "zips": ["tekken2jb.zip", "tekken2.zip"], "crc": 2962072876, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1rom2u.ic4", "zips": ["tekken2jb.zip", "tekken2.zip"], "crc": 2316657080, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1rom3l.ic9", "zips": ["tekken2jb.zip", "tekken2.zip"], "crc": 3584823064, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1rom3u.ic1", "zips": ["tekken2jb.zip", "tekken2.zip"], "crc": 1156403357, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 6,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "tes1sprog.6d", "zips": ["tekken2jb.zip", "tekken2.zip"], "crc": 2937615775, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 7,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "tes1wave.8k", "zips": ["tekken2jb.zip", "tekken2.zip"], "crc": 883117739, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 8,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "c76.bin", "zips": ["namcoc76.zip"], "offset": 0, "length": 0}
+     ]
+    }
+   ]
+  },
+  {
+   "set": "tekken2jc",
+   "title": "Tekken 2 Ver.B (Japan, TES1/VER.C)",
+   "alt": true,
+   "instance": "_alternatives/Tekken 2 Ver.B (Japan, TES1-VER.C).json",
+   "roms": [
+    {
+     "index": 0,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1verc.2l", "zips": ["tekken2jc.zip", "tekken2.zip"], "crc": 2882226561, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1verc.2j", "zips": ["tekken2jc.zip", "tekken2.zip"], "crc": 3644243807, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1verb.2k", "zips": ["tekken2jc.zip", "tekken2.zip"], "crc": 1720493842, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1verb.2f", "zips": ["tekken2jc.zip", "tekken2.zip"], "crc": 3304483338, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 1,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "data": "3401"}
+     ]
+    },
+    {
+     "index": 3,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1rom0l.ic6", "zips": ["tekken2jc.zip", "tekken2.zip"], "crc": 4237315806, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1rom0u.ic5", "zips": ["tekken2jc.zip", "tekken2.zip"], "crc": 1471385437, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1rom1l.ic8", "zips": ["tekken2jc.zip", "tekken2.zip"], "crc": 2856906827, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1rom1u.ic3", "zips": ["tekken2jc.zip", "tekken2.zip"], "crc": 2974270787, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1rom2l.ic7", "zips": ["tekken2jc.zip", "tekken2.zip"], "crc": 2962072876, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1rom2u.ic4", "zips": ["tekken2jc.zip", "tekken2.zip"], "crc": 2316657080, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1rom3l.ic9", "zips": ["tekken2jc.zip", "tekken2.zip"], "crc": 3584823064, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1rom3u.ic1", "zips": ["tekken2jc.zip", "tekken2.zip"], "crc": 1156403357, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 6,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "tes1sprog.6d", "zips": ["tekken2jc.zip", "tekken2.zip"], "crc": 2937615775, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 7,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "tes1wave.8k", "zips": ["tekken2jc.zip", "tekken2.zip"], "crc": 883117739, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 8,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "c76.bin", "zips": ["namcoc76.zip"], "offset": 0, "length": 0}
+     ]
+    }
+   ]
+  },
+  {
+   "set": "tekken2ub",
+   "title": "Tekken 2 Ver.B (US, TES3/VER.B)",
+   "alt": true,
+   "instance": "_alternatives/Tekken 2 Ver.B (US, TES3-VER.B).json",
+   "roms": [
+    {
+     "index": 0,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes3verb.2l", "zips": ["tekken2ub.zip", "tekken2.zip"], "crc": 1183975263, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes3verb.2j", "zips": ["tekken2ub.zip", "tekken2.zip"], "crc": 3678324288, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1verb.2k", "zips": ["tekken2ub.zip", "tekken2.zip"], "crc": 1720493842, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1verb.2f", "zips": ["tekken2ub.zip", "tekken2.zip"], "crc": 3304483338, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 1,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "data": "3401"}
+     ]
+    },
+    {
+     "index": 3,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1rom0l.ic6", "zips": ["tekken2ub.zip", "tekken2.zip"], "crc": 4237315806, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1rom0u.ic5", "zips": ["tekken2ub.zip", "tekken2.zip"], "crc": 1471385437, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1rom1l.ic8", "zips": ["tekken2ub.zip", "tekken2.zip"], "crc": 2856906827, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1rom1u.ic3", "zips": ["tekken2ub.zip", "tekken2.zip"], "crc": 2974270787, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1rom2l.ic7", "zips": ["tekken2ub.zip", "tekken2.zip"], "crc": 2962072876, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1rom2u.ic4", "zips": ["tekken2ub.zip", "tekken2.zip"], "crc": 2316657080, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1rom3l.ic9", "zips": ["tekken2ub.zip", "tekken2.zip"], "crc": 3584823064, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1rom3u.ic1", "zips": ["tekken2ub.zip", "tekken2.zip"], "crc": 1156403357, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 6,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "tes1sprog.6d", "zips": ["tekken2ub.zip", "tekken2.zip"], "crc": 2937615775, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 7,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "tes1wave.8k", "zips": ["tekken2ub.zip", "tekken2.zip"], "crc": 883117739, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 8,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "c76.bin", "zips": ["namcoc76.zip"], "offset": 0, "length": 0}
+     ]
+    }
+   ]
+  },
+  {
+   "set": "tekken2ud",
+   "title": "Tekken 2 Ver.B (US, TES3/VER.D)",
+   "alt": true,
+   "instance": "_alternatives/Tekken 2 Ver.B (US, TES3-VER.D).json",
+   "roms": [
+    {
+     "index": 0,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes3verd.2l", "zips": ["tekken2ud.zip", "tekken2.zip"], "crc": 124318572, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes3verd.2j", "zips": ["tekken2ud.zip", "tekken2.zip"], "crc": 3533309253, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1verd.2k", "zips": ["tekken2ud.zip", "tekken2.zip"], "crc": 2221592074, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1verd.2f", "zips": ["tekken2ud.zip", "tekken2.zip"], "crc": 2047239092, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 1,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "data": "1401"}
+     ]
+    },
+    {
+     "index": 3,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1rom0l.ic6", "zips": ["tekken2ud.zip", "tekken2.zip"], "crc": 4237315806, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1rom0u.ic5", "zips": ["tekken2ud.zip", "tekken2.zip"], "crc": 1471385437, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1rom1l.ic8", "zips": ["tekken2ud.zip", "tekken2.zip"], "crc": 2856906827, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1rom1u.ic3", "zips": ["tekken2ud.zip", "tekken2.zip"], "crc": 2974270787, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1rom2l.ic7", "zips": ["tekken2ud.zip", "tekken2.zip"], "crc": 2962072876, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1rom2u.ic4", "zips": ["tekken2ud.zip", "tekken2.zip"], "crc": 2316657080, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1rom3l.ic9", "zips": ["tekken2ud.zip", "tekken2.zip"], "crc": 3584823064, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1rom3u.ic1", "zips": ["tekken2ud.zip", "tekken2.zip"], "crc": 1156403357, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 6,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "tes1sprog.6d", "zips": ["tekken2ud.zip", "tekken2.zip"], "crc": 2937615775, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 7,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "tes1wave.8k", "zips": ["tekken2ud.zip", "tekken2.zip"], "crc": 883117739, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 8,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "c76.bin", "zips": ["namcoc76.zip"], "offset": 0, "length": 0}
+     ]
+    }
+   ]
+  },
+  {
+   "set": "tekken2b",
+   "title": "Tekken 2 Ver.B (World, TES2/VER.B)",
+   "alt": true,
+   "instance": "_alternatives/Tekken 2 Ver.B (World, TES2-VER.B).json",
+   "roms": [
+    {
+     "index": 0,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes2verb.2l", "zips": ["tekken2b.zip", "tekken2.zip"], "crc": 2862236931, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes2verb.2j", "zips": ["tekken2b.zip", "tekken2.zip"], "crc": 1668312460, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1verb.2k", "zips": ["tekken2b.zip", "tekken2.zip"], "crc": 1720493842, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1verb.2f", "zips": ["tekken2b.zip", "tekken2.zip"], "crc": 3304483338, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 1,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "data": "3401"}
+     ]
+    },
+    {
+     "index": 3,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1rom0l.ic6", "zips": ["tekken2b.zip", "tekken2.zip"], "crc": 4237315806, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1rom0u.ic5", "zips": ["tekken2b.zip", "tekken2.zip"], "crc": 1471385437, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1rom1l.ic8", "zips": ["tekken2b.zip", "tekken2.zip"], "crc": 2856906827, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1rom1u.ic3", "zips": ["tekken2b.zip", "tekken2.zip"], "crc": 2974270787, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1rom2l.ic7", "zips": ["tekken2b.zip", "tekken2.zip"], "crc": 2962072876, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1rom2u.ic4", "zips": ["tekken2b.zip", "tekken2.zip"], "crc": 2316657080, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "tes1rom3l.ic9", "zips": ["tekken2b.zip", "tekken2.zip"], "crc": 3584823064, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "tes1rom3u.ic1", "zips": ["tekken2b.zip", "tekken2.zip"], "crc": 1156403357, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 6,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "tes1sprog.6d", "zips": ["tekken2b.zip", "tekken2.zip"], "crc": 2937615775, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 7,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "tes1wave.8k", "zips": ["tekken2b.zip", "tekken2.zip"], "crc": 883117739, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 8,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "c76.bin", "zips": ["namcoc76.zip"], "offset": 0, "length": 0}
+     ]
+    }
+   ]
+  },
+  {
+   "set": "tekkenac",
+   "title": "Tekken (Asia, TE4/VER.C)",
+   "alt": true,
+   "instance": "_alternatives/Tekken (Asia, TE4-VER.C).json",
+   "roms": [
+    {
+     "index": 0,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "te4verc.2l", "zips": ["tekkenac.zip", "tekken.zip"], "crc": 2127263890, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "te4verc.2j", "zips": ["tekkenac.zip", "tekken.zip"], "crc": 4003673693, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "te1verb.2k", "zips": ["tekkenac.zip", "tekken.zip"], "crc": 3112569641, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "te1verb.2f", "zips": ["tekkenac.zip", "tekken.zip"], "crc": 1035999917, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 1,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "data": "14"}
+     ]
+    },
+    {
+     "index": 3,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "te1rom0l.ic5", "zips": ["tekkenac.zip", "tekken.zip"], "crc": 58224137, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "te1rom0u.ic6", "zips": ["tekkenac.zip", "tekken.zip"], "crc": 1977159761, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "te1rom1l.ic3", "zips": ["tekkenac.zip", "tekken.zip"], "crc": 2168549262, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "te1rom1u.ic8", "zips": ["tekkenac.zip", "tekken.zip"], "crc": 4202406963, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "te1rom2l.ic4", "zips": ["tekkenac.zip", "tekken.zip"], "crc": 1104640070, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "te1rom2u.ic7", "zips": ["tekkenac.zip", "tekken.zip"], "crc": 2792921214, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 6,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "te1sprog.6d", "zips": ["tekkenac.zip", "tekken.zip"], "crc": 2224392169, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 7,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "te1wave.8k", "zips": ["tekkenac.zip", "tekken.zip"], "crc": 4242982266, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 8,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "c76.bin", "zips": ["namcoc76.zip"], "offset": 0, "length": 0}
+     ]
+    }
+   ]
+  },
+  {
+   "set": "tekkenjb",
+   "title": "Tekken (Japan, TE1/VER.B)",
+   "alt": true,
+   "instance": "_alternatives/Tekken (Japan, TE1-VER.B).json",
+   "roms": [
+    {
+     "index": 0,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "te1verb.2l", "zips": ["tekkenjb.zip", "tekken.zip"], "crc": 1116844014, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "te1verb.2j", "zips": ["tekkenjb.zip", "tekken.zip"], "crc": 1548961541, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "te1verb.2k", "zips": ["tekkenjb.zip", "tekken.zip"], "crc": 3112569641, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "te1verb.2f", "zips": ["tekkenjb.zip", "tekken.zip"], "crc": 1035999917, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 1,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "data": "14"}
+     ]
+    },
+    {
+     "index": 3,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "te1rom0l.ic5", "zips": ["tekkenjb.zip", "tekken.zip"], "crc": 58224137, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "te1rom0u.ic6", "zips": ["tekkenjb.zip", "tekken.zip"], "crc": 1977159761, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "te1rom1l.ic3", "zips": ["tekkenjb.zip", "tekken.zip"], "crc": 2168549262, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "te1rom1u.ic8", "zips": ["tekkenjb.zip", "tekken.zip"], "crc": 4202406963, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "te1rom2l.ic4", "zips": ["tekkenjb.zip", "tekken.zip"], "crc": 1104640070, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "te1rom2u.ic7", "zips": ["tekkenjb.zip", "tekken.zip"], "crc": 2792921214, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 6,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "te1sprog.6d", "zips": ["tekkenjb.zip", "tekken.zip"], "crc": 2224392169, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 7,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "te1wave.8k", "zips": ["tekkenjb.zip", "tekken.zip"], "crc": 4242982266, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 8,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "c76.bin", "zips": ["namcoc76.zip"], "offset": 0, "length": 0}
+     ]
+    }
+   ]
+  },
+  {
+   "set": "tekkenb",
+   "title": "Tekken (World, TE2/VER.B)",
+   "alt": true,
+   "instance": "_alternatives/Tekken (World, TE2-VER.B).json",
+   "roms": [
+    {
+     "index": 0,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "te2verb.2l", "zips": ["tekkenb.zip", "tekken.zip"], "crc": 611122141, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "te2verb.2j", "zips": ["tekkenb.zip", "tekken.zip"], "crc": 3752345159, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "te1verb.2k", "zips": ["tekkenb.zip", "tekken.zip"], "crc": 3112569641, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "te1verb.2f", "zips": ["tekkenb.zip", "tekken.zip"], "crc": 1035999917, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 1,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "data": "14"}
+     ]
+    },
+    {
+     "index": 3,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "te1rom0l.ic5", "zips": ["tekkenb.zip", "tekken.zip"], "crc": 58224137, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "te1rom0u.ic6", "zips": ["tekkenb.zip", "tekken.zip"], "crc": 1977159761, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "te1rom1l.ic3", "zips": ["tekkenb.zip", "tekken.zip"], "crc": 2168549262, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "te1rom1u.ic8", "zips": ["tekkenb.zip", "tekken.zip"], "crc": 4202406963, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "te1rom2l.ic4", "zips": ["tekkenb.zip", "tekken.zip"], "crc": 1104640070, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "te1rom2u.ic7", "zips": ["tekkenb.zip", "tekken.zip"], "crc": 2792921214, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 6,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "te1sprog.6d", "zips": ["tekkenb.zip", "tekken.zip"], "crc": 2224392169, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 7,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "te1wave.8k", "zips": ["tekkenb.zip", "tekken.zip"], "crc": 4242982266, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 8,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "c76.bin", "zips": ["namcoc76.zip"], "offset": 0, "length": 0}
+     ]
+    }
+   ]
+  },
+  {
+   "set": "xevi3dgj",
+   "title": "Xevious 3D/G (Japan, XV31/VER.A)",
+   "alt": true,
+   "instance": "_alternatives/Xevious 3D-G (Japan, XV31-VER.A).json",
+   "roms": [
+    {
+     "index": 0,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "xv31vera.2l", "zips": ["xevi3dgj.zip", "xevi3dg.zip"], "crc": 1100877587, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "xv31vera.2j", "zips": ["xevi3dgj.zip", "xevi3dg.zip"], "crc": 3751098170, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "xv31vera.2k", "zips": ["xevi3dgj.zip", "xevi3dg.zip"], "crc": 1029182350, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "xv31vera.2f", "zips": ["xevi3dgj.zip", "xevi3dg.zip"], "crc": 2659680418, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 1,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "data": "1405"}
+     ]
+    },
+    {
+     "index": 3,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "xv31rom0l.ic5", "zips": ["xevi3dgj.zip", "xevi3dg.zip"], "crc": 618783330, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "xv31rom0u.ic6", "zips": ["xevi3dgj.zip", "xevi3dg.zip"], "crc": 3403910899, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "xv31rom1l.ic3", "zips": ["xevi3dgj.zip", "xevi3dg.zip"], "crc": 1186253682, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "xv31rom1u.ic8", "zips": ["xevi3dgj.zip", "xevi3dg.zip"], "crc": 3188635089, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "xv31rom2l.ic4", "zips": ["xevi3dgj.zip", "xevi3dg.zip"], "crc": 2214830711, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "xv31rom2u.ic7", "zips": ["xevi3dgj.zip", "xevi3dg.zip"], "crc": 3975611442, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 6,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "xv31sprog.6d", "zips": ["xevi3dgj.zip", "xevi3dg.zip"], "crc": 3842737514, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 7,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "xv31wave.8k", "zips": ["xevi3dgj.zip", "xevi3dg.zip"], "crc": 351428061, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 8,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "c76.bin", "zips": ["namcoc76.zip"], "offset": 0, "length": 0}
+     ]
+    }
+   ]
+  },
+  {
+   "set": "xevi3dga",
+   "title": "Xevious 3D/G (World, XV32/VER.A)",
+   "alt": true,
+   "instance": "_alternatives/Xevious 3D-G (World, XV32-VER.A).json",
+   "roms": [
+    {
+     "index": 0,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "xv32vera.2l", "zips": ["xevi3dga.zip", "xevi3dg.zip"], "crc": 3143372571, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "xv32vera.2j", "zips": ["xevi3dga.zip", "xevi3dg.zip"], "crc": 568459319, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "xv31vera.2k", "zips": ["xevi3dga.zip", "xevi3dg.zip"], "crc": 1029182350, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "xv31vera.2f", "zips": ["xevi3dga.zip", "xevi3dg.zip"], "crc": 2659680418, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 1,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "data": "1405"}
+     ]
+    },
+    {
+     "index": 3,
+     "parts": [
+      {"unit": 2, "map": 1, "repeat": 1, "name": "xv31rom0l.ic5", "zips": ["xevi3dga.zip", "xevi3dg.zip"], "crc": 618783330, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "xv31rom0u.ic6", "zips": ["xevi3dga.zip", "xevi3dg.zip"], "crc": 3403910899, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "xv31rom1l.ic3", "zips": ["xevi3dga.zip", "xevi3dg.zip"], "crc": 1186253682, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "xv31rom1u.ic8", "zips": ["xevi3dga.zip", "xevi3dg.zip"], "crc": 3188635089, "offset": 0, "length": 0},
+      {"unit": 2, "map": 1, "repeat": 1, "name": "xv31rom2l.ic4", "zips": ["xevi3dga.zip", "xevi3dg.zip"], "crc": 2214830711, "offset": 0, "length": 0},
+      {"unit": 2, "map": 16, "repeat": 1, "name": "xv31rom2u.ic7", "zips": ["xevi3dga.zip", "xevi3dg.zip"], "crc": 3975611442, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 6,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "xv31sprog.6d", "zips": ["xevi3dga.zip", "xevi3dg.zip"], "crc": 2124400288, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 7,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "xv31wave.8k", "zips": ["xevi3dga.zip", "xevi3dg.zip"], "crc": 351428061, "offset": 0, "length": 0}
+     ]
+    },
+    {
+     "index": 8,
+     "parts": [
+      {"unit": 1, "map": 0, "repeat": 1, "name": "c76.bin", "zips": ["namcoc76.zip"], "offset": 0, "length": 0}
+     ]
+    }
+   ]
+  }
+ ]
+}
